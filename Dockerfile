@@ -8,4 +8,4 @@ ARG JAR_FILE=./slothiusdev.jar
 # anade el archivo jar dentro del contenedor y lo pone de nombre app.jar
 ADD ${JAR_FILE} app.jar
 # executa el archivo jar dentro del contenedor
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","app.jar","-Xms8m","-Xmx25m"]
